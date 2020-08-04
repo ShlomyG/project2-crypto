@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto coins by Shlomy Gerstner</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <script src="./pace/pace.js"></script>
+        <script src="./app.js" type="module" defer></script>
+        
+    
+</head>
+<body>          
+            
+            <div class="headline"><b>Crypto Currency </b><img  src="https://ormeuscoin.com/wp-content/uploads/2017/08/Coins-3.png" Id="CryptoImg"></div>
+            
+                <nav id="taskbar" class="nav justify-content-center" >
+                    <div class="btn-group nav-item" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary">Home</button>
+                        <button type="button" class="btn btn-secondary">Live Report</button>
+                        <button type="button" class="btn btn-secondary">About</button>
+                    </div>
+              
+                    <div id="searchbar" class="btn-group btn-group-toggle nav-item">
+                        <input type="text" id="coinInput" placeholder="Cryptocurrency By ID" >
+                        <button type="submit" class="btn btn-outline-secondary" style="background-color:lightgrey">Search</button> 
+
+                    </div>
+                </nav>
+                    <div id="main">
+                        <div id="messegeArea" ></div>
+                        <div id="homepage" >       
+                        </div>
+                        <div id="chartContainer" style="height: 300px; width: 100%;"></div> 
+                        <div id="about" style="display: none;">
+                            <img src="./images/my_pic.jpg" alt="" id="mypic">
+                            <div id="aboutMe"> <h1 style="text-shadow: yellow 4px 4px;">About Me - Shlomi Gerstner</h1>
+                                My name is Shlomi.<br>
+                                I'm 36 years old, married to Lilach and we have 3 lovely children.<br>
+                                I have a B.A. in business administration. until recently in manage a chain of brand stores<br>
+                                I'm doing now retraining to Fullstack website and application development. 
+                                <br>
+                                <h2>About the project</h2>
+                                <strong>Crypto Currency</strong>, In this project you can get details about Crypto,<br>
+                                in home screen you can see the coins and get up to date details,<br>
+                                you can also select (until 5) coins using the top button on the right and update them in the graph in the live report section.<br>
+                                This is my second project as part of the Fullstack web course, the project encompasses most of what we have learned in the last 4 months and contains both Front and Back End.<br>
+                                The subject I used to write the project are:<br>
+                                Javascript, HTML 5, Css 3, Bootstrap 4, Single Page Application, Ajax, External API's, JS modules and more... <br><br> My email: Shlomyg7@gmail.com
+                            </div>     
+                        </div>
+                    </div>
+                    </div>
+                    
+                    
+                <dialog id="myDialog">
+                              <h5 class="modal-title">You can choose only 5 coins </h5>
+                            </div>
+                            <div class="modal-body">
+                              <p>Select a coin do you want to remove.
+                              If you want to stay with the selected currencies select close.</p>
+                              <p id="messegeModal"></p>
+                              <div id="coinsPanel"></div>
+                            </div>
+                            <div class="modal-footer">
+                              <button id="saveCoins" type="button" class="btn btn-primary">Save changes</button>
+                              <button id="closeCoins" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </dialog>
+                
+</body>
+</html>

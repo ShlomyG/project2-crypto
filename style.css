@@ -1,0 +1,423 @@
+body {margin: 0px;}
+
+body {
+    background-image: url('images/bitcoin-cash-logo-3d-white-logo-3d-art-white-background-cryptocurrency.jpg');
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.headline{
+    height: 30%;
+    /* width: ; */
+border-radius: 35px; border-bottom: grey solid 4px;
+text-shadow: 2px 2px 5px grey;
+font-size: 65px;
+background-color: lightgray;
+
+}
+
+label{ margin: 4px;
+font-size: 18px;
+font-family: 'Quicksand', sans-serif;    
+
+}
+
+
+
+b{
+    position: absolute;
+    left: 50px;
+    top: 45px;
+  
+ }
+
+ #CryptoImg{height:180px;
+    position: relative;
+    top: 2%;
+    left: 60%;
+}
+
+#taskbar{
+ margin: 5px;
+}
+
+.btn-group{
+  margin-right: 5px;}
+
+#searchbar{
+margin-left: 5px;
+}
+
+#mypic {
+  border-radius: 50%;
+  float: left;
+  margin-right: 25px;
+  width: 360px;
+  margin-left: 25px;
+  }
+
+#homepage {
+    display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 8px;
+    justify-content: center;}
+
+  .infoSpan:first-child{
+  font-weight: bold;
+
+
+
+ }
+
+.DivCoin{
+    position: relative;
+    /* border: black 1px solid; */
+    width: 190px; height: 255px; 
+    margin: 7px;
+    font-family: 'Quicksand', sans-serif;    
+        /* block-size: auto;  */
+        text-align: center;
+        background-color: rgb(211, 211, 211,0.8);
+        border: rgb(185, 185, 185) 1px solid;
+
+
+  }
+
+span{
+margin-bottom:19px;
+margin-left:19px;
+margin-top:9px;
+/* display: block; */
+}
+
+span.middle{
+    position: relative;
+    top:-50px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+#about {
+  font-family: 'Quicksand', sans-serif;    
+
+}
+
+.infoSpan {
+    display: flex;
+    font-family: 'Quicksand', sans-serif;    
+}
+
+
+
+.moreInfo{
+    position: absolute;
+    bottom: 3px;
+    left: 5px;
+    display: block;
+  
+}
+
+.closeInfo{
+  position: relative;
+  bottom: -2px;
+  left: -40px;
+  display: block;
+
+
+}
+
+.divInfo{    position: relative;
+    display: inline-block;
+    width: 63px;
+    height: 52px;
+    top:-96px;
+    width: 100px; height: 100px;
+  }
+
+    .infoText{position: relative;
+        right:20px;
+        bottom:20px;
+
+    }
+
+.coinImg{width: 50px; height: 50px;
+  position: relative;
+  top: 2%;
+  left: 60%;
+
+
+  
+}
+ 
+
+.scale-in-ver-bottom {
+  -webkit-animation: scale-in-ver-bottom 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-ver-bottom 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+
+.scale-in-ver-top {
+  -webkit-animation: scale-in-ver-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-ver-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+/* .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  background-color: #f1f1f1;
+} */
+
+
+/* toggle button  */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 63px;
+    height: 52px;
+    top:-50px;
+    left: 45px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* prograss bar */
+
+  .pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  
+    z-index: 2000;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 15px;
+    width: 200px;
+    background: #fff;
+    border: 1px solid black;
+  
+    overflow: hidden;
+  }
+  
+  .pace .pace-progress {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  
+    max-width: 200px;
+    position: fixed;
+    z-index: 2000;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background:lightgray;
+  }
+  
+  .pace.pace-inactive {
+    display: none;
+  }
+
+
+
+.scene {
+  width: 200px;
+  height: 260px;
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: red;
+}
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg);
+
+}
