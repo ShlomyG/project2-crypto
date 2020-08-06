@@ -9,6 +9,10 @@ document.getElementById('taskbar').addEventListener('click', function (e) {
         }
           
     if (e.target.textContent === 'Home') {
+        document.querySelector('#homepage').style.display = 'flex'
+        document.querySelector('#chartContainer').style.display ='none'
+        document.querySelector('#about').style.display = 'none'
+        document.querySelector('#searchbar').style.display = 'inline'
     clearGraph()
 
 }
@@ -20,6 +24,8 @@ document.getElementById('taskbar').addEventListener('click', function (e) {
         document.querySelector('#homepage').style.display = 'none'
         document.querySelector('#about').style.display = 'block'
               document.querySelector('#searchbar').style.display = 'none'  
+              clearGraph()
+
     }
 }
 )

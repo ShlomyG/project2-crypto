@@ -19,7 +19,7 @@ function createCoinBox(obj, coinDivContainer) {
         newDiv.innerHTML = `
         <span class="infoSpan">${symbol.toUpperCase()}</span><label class="switch">
         <input id="${symbol}" type="checkbox"><span class="slider round"></span></label>
-        <span class="infoSpan middle">${name}</span>
+        <span class="infoSpan middle">${name.slice(0,15)}</span>
         <button id="${obj[i].id}" class="btn-secondary moreInfo">More Info</button>
         <div id="info${obj[i].id}" ></div>`
         coinDivContainer.appendChild(newDiv)
@@ -139,6 +139,11 @@ function createCoinBox(obj, coinDivContainer) {
       if (arrayToggle.length === 0) {
         document.querySelector('#messegeArea').innerHTML="<h5 class='alert alert-dark' role='alert' style='text-align: center;'>Please choose a Coins For Live Report Option</h5>";
         setTimeout(function(){ document.querySelector('#messegeArea').innerHTML=""}, 2200);
+        document.querySelector('#chartContainer').style.display ='none'
+        document.querySelector('#homepage').style.display = 'flex'
+        document.querySelector('#about').style.display = 'none'
+        document.querySelector('#searchbar').style.display = 'none'
+
 
     }
     if (arrayToggle.length >= 1) {
@@ -251,10 +256,7 @@ let chart;
 }
 
 export function clearGraph()  {
-  document.querySelector('#homepage').style.display = 'flex'
-  document.querySelector('#chartContainer').style.display ='none'
-  document.querySelector('#about').style.display = 'none'
-  document.querySelector('#searchbar').style.display = 'inline'
+ 
 
 // 
   clearInterval(interval)
