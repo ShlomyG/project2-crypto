@@ -61,28 +61,22 @@ function createCoinBox(obj, coinDivContainer) {
         ){infoDiv.textContent=''
         infoDiv.style.display = "none";
         document.querySelector(`button[id="${info.id}"]`).style.display='block';
-
       })
       }
       
       function toggleFunc(e) {
         tempToggle=e.target.id
 
-
         if(arrayToggle.includes(e.target.id)){
           arrayToggle = arrayToggle.filter(toggle => toggle !==  e.target.id)
-          console.log(arrayToggle)
-
             }
         else if (arrayToggle.length < 5 && !arrayToggle.includes(e.target.id))
         {
           arrayToggle.push(e.target.id)
-          console.log(arrayToggle)
         }
         else if (arrayToggle.length >= 5)
         { 
           document.querySelector(`input[id="${e.target.id}"]`).checked = false;
-
 
         let coinsPanel = document.getElementById("coinsPanel")
         coinsPanel.innerHTML=
@@ -109,64 +103,45 @@ function createCoinBox(obj, coinDivContainer) {
                 if(arrayTemp.length==5){
                   document.querySelector('#messegeModal').innerHTML="<h6 class='alert alert-dark' role='alert' style='text-align: center;'>Please choose coin to change or click the close button</h6>";
                   setTimeout(function(){ document.querySelector('#messegeModal').innerHTML=""}, 2200);
-          
                  return}
               }
   for (let i = arrayToggle.length - 1; i >= 0; i--) {
     if (!arrayTemp.includes(arrayToggle[i])) {
       document.querySelector(`input[id="${arrayToggle[i]}"]`).checked = false;
       arrayToggle.splice(i, 1)
-      console.log(arrayToggle) 
     }
   }
   if(tempToggle){
     let temp=document.querySelector(`input[id="${tempToggle}"]`);
-    console.log("temp=",temp)
     temp.checked = true;
   arrayToggle.push(tempToggle)}
-              console.log(e.target.id+" = End")
-          console.log(arrayToggle)
           document.getElementById("myDialog").close();
       }
       function closeModal() {
 
           document.getElementById("myDialog").close()
       }
-
     }
-
     export function arrayToCreateGraph(){
       if (arrayToggle.length === 0) {
         document.querySelector('#messegeArea').innerHTML="<h5 class='alert alert-dark' role='alert' style='text-align: center;'>Please choose a Coins For Live Report Option</h5>";
         setTimeout(function(){ document.querySelector('#messegeArea').innerHTML=""}, 2200);
-        document.querySelector('#chartContainer').style.display ='none'
-        document.querySelector('#homepage').style.display = 'flex'
-        document.querySelector('#about').style.display = 'none'
-        document.querySelector('#searchbar').style.display = 'none'
-
-
+        displayHome();
+        document.querySelector("button[id='buttonHome']").focus()
     }
+
     if (arrayToggle.length >= 1) {
-      document.querySelector('#chartContainer').style.display ='block'
-      document.querySelector('#homepage').style.display = 'none'
-      document.querySelector('#about').style.display = 'none'
-      document.querySelector('#searchbar').style.display = 'none'
-
-
-
+displayLiveReport()
         let url = arrayToggle.join()
         createCanvasElement(arrayToggle)
-        console.log(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=${url}&tsyms=USD`)
         getApiData(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=${url}&tsyms=USD`, makeGraph)
         interval = setInterval(function () { getApiData(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=${url}&tsyms=USD`, makeGraph) }, 2000)
-        // arrayToggle = []
     }
 }
 
 export function makeGraph() {
   let objToPush;
   let keys = Object.keys(JSON.parse(this.responseText))
-
 
   if (chart.data) {
       for (var i = 0; i < keys.length; i++) {
@@ -188,7 +163,7 @@ let chart;
     chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
         title: {
-            text: "Coins Value Comparison (in USD)"
+            text: "Coins Value in USD"
         },
         axisX: {
             valueFormatString: "hh:mm:ss"
@@ -256,18 +231,11 @@ let chart;
 }
 
 export function clearGraph()  {
- 
-
-// 
   clearInterval(interval)
 }
 
 let interval;
 
-
-      
-
-    
 export function coinSearch(e) {
   let CoinId;
   let input = document.querySelector('#coinInput').value.toLowerCase()
@@ -303,6 +271,26 @@ export function showAllDiv() {
   }
 }
 
+export function displayHome(){
+  document.querySelector('#chartContainer').style.display ='none'
+  document.querySelector('#homepage').style.display = 'flex'
+  document.querySelector('#about').style.display = 'none'
+  document.querySelector('#searchbar').style.display = 'none'
+}
+
+export function displayLiveReport(){
+  document.querySelector('#chartContainer').style.display ='block'
+  document.querySelector('#homepage').style.display = 'none'
+  document.querySelector('#about').style.display = 'none'
+  document.querySelector('#searchbar').style.display = 'none'
+}
+      
+export function displayAbout(){
+  document.querySelector('#chartContainer').style.display ='none'
+  document.querySelector('#homepage').style.display = 'none'
+  document.querySelector('#about').style.display = 'grid'
+   document.querySelector('#searchbar').style.display = 'none'  
+}
       
 
 

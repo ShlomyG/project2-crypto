@@ -62,7 +62,6 @@ margin-left: 5px;
 
 #homepage {
     display: flex;
-    /* flex-direction: row; */
     width: 100%;
     flex-wrap: wrap;
     margin: 8px;
@@ -77,11 +76,9 @@ margin-left: 5px;
 
 .DivCoin{
     position: relative;
-    /* border: black 1px solid; */
     width: 190px; height: 255px; 
     margin: 7px;
     font-family: 'Quicksand', sans-serif;    
-        /* block-size: auto;  */
         text-align: center;
         background-color: rgb(211, 211, 211,0.8);
         border: rgb(185, 185, 185) 1px solid;
@@ -93,7 +90,6 @@ span{
 margin-bottom:19px;
 margin-left:19px;
 margin-top:9px;
-/* display: block; */
 }
 
 span.middle{
@@ -151,8 +147,6 @@ span.middle{
   top: 2%;
   left: 60%;
 
-
-  
 }
  
 
@@ -233,31 +227,6 @@ span.middle{
     opacity: 1;
   }
 }
-
-/* .collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 100px;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  background-color: #f1f1f1;
-} */
-
 
 /* toggle button  */
 .switch {
@@ -424,14 +393,24 @@ span.middle{
 
 
 #chartContainer{
-  /* margin: 15px; */
   position: relative;
   right: 10%;
   left: 10%;
   margin-top: 10px;
-  /* height: 100%;
-    width: 100%; */
+}
 
-/* 
-border: darkgrey 3px solid; */
+#mypic { grid-area: mypic; }
+#aboutMe { grid-area: aboutMe; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+#about {
+  display: grid;
+  grid-template-areas:
+    'mypic aboutMe aboutMe'
+    'mypic aboutMe aboutMe'
+    'mypic aboutMe aboutMe';
+  grid-gap: 10px;
+  padding: 10px;
 }
